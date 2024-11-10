@@ -1,0 +1,178 @@
+/* Estilos generales para el menú */
+.grid-menu-principal {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    align-items: center;
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+}
+
+/* Logo y menú de hamburguesa */
+.grid-menu-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.grid-menu-logo img {
+    width: 40px;
+    height: auto;
+    cursor: pointer;
+}
+
+/* Estilos para el buscador */
+.grid-menu-buscador {
+    display: flex;
+    justify-content: center;
+}
+
+.formulario-buscar {
+    display: flex;
+    align-items: center;
+}
+
+.formulario-buscar input {
+    padding: 8px;
+    border: none;
+    border-radius: 4px 0 0 4px;
+    outline: none;
+    width: 200px;
+}
+
+.formulario-buscar button {
+    padding: 8px;
+    border: none;
+    background-color: #555;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.formulario-buscar button:disabled {
+    background-color: #888;
+    cursor: not-allowed;
+}
+
+/* Links principales del menú */
+.grid-menu-links {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.grid-menu-links a,
+.grid-menu-links p {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.grid-menu-links a:hover,
+.grid-menu-links p:hover {
+    color: #ddd;
+}
+
+/* Iconos del menú */
+.grid-menu-iconos {
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+}
+
+.grid-menu-iconos img {
+    width: 24px;
+    cursor: pointer;
+}
+
+.icono-perfiles {
+    position: relative;
+}
+
+.icono-perfiles span p {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background: red;
+    color: white;
+    font-size: 10px;
+    padding: 2px 4px;
+    border-radius: 50%;
+}
+
+/* Subcategorías y categorías */
+.contenedor-categorias-secundario {
+    background-color: #444;
+    padding: 15px;
+}
+
+.grid-categorias-menu {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 10px;
+}
+
+.grid-categorias-menu p {
+    cursor: pointer;
+    color: #fff;
+    padding: 10px;
+    border-radius: 4px;
+    text-align: center;
+}
+
+.grid-categorias-menu p:hover {
+    background-color: #666;
+}
+
+.grid-subcategorias-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.contenedor-subcategorias-menu h3.subtitulo {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #fff;
+}
+
+/* Galería de imágenes */
+.contenedor-subcategorias-galeria {
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+}
+
+.contenedor-subcategorias-galeria img {
+    width: 100px;
+    height: auto;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.contenedor-subcategorias-galeria img:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
+
+/* Media queries para diferentes tamaños de pantalla */
+@media (max-width: 800px) {
+    .grid-menu-principal {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .grid-menu-logo,
+    .grid-menu-buscador,
+    .grid-menu-links {
+        margin-top: 10px;
+    }
+
+    .grid-menu-iconos {
+        justify-content: center;
+    }
+}
